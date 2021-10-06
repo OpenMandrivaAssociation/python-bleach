@@ -7,7 +7,7 @@ Summary:        An easy whitelist-based HTML-sanitizing tool
 Group:          Development/Python
 License:        ASL 2.0
 URL:            http://github.com/jsocol/bleach
-Source0:        https://files.pythonhosted.org/packages/6a/a3/217842324374fd3fb33db0eb4c2909ccf3ecc5a94f458088ac68581f8314/bleach-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/b/breathe/bleach-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  pkgconfig(python)
