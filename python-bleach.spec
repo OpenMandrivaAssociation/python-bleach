@@ -7,23 +7,16 @@ Summary:        An easy whitelist-based HTML-sanitizing tool
 Group:          Development/Python
 License:        ASL 2.0
 URL:            http://github.com/jsocol/bleach
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/6a/a3/217842324374fd3fb33db0eb4c2909ccf3ecc5a94f458088ac68581f8314/bleach-%{version}.tar.gz
 BuildArch:      noarch
 
-%description
-Bleach is an HTML sanitizing library that escapes or strips markup and
-attributes based on a white list.
-
-
-%package -n python3-%{srcname}
-Summary:        An easy whitelist-based HTML-sanitizing tool
-BuildRequires:  python3-devel
+BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(six)
 BuildRequires:  python3dist(html5lib)
 %{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python3-%{srcname}
+%description
 Bleach is an HTML sanitizing library that escapes or strips markup and
 attributes based on a white list.
 
@@ -43,14 +36,13 @@ rm -r bleach/_vendor/
 sed -i "s/bleach._vendor.html5lib/html5lib/g" bleach/html5lib_shim.py
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
-%files -n python3-%{srcname}
+%files
 %license LICENSE
 %doc README.rst
-%{python3_sitelib}/%{srcname}-*.egg-info/
-%{python3_sitelib}/%{srcname}/
-
+%{python_sitelib}/%{srcname}-*.egg-info/
+%{python_sitelib}/%{srcname}/
