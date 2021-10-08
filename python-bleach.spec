@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        4.1.0
-Release:        1
+Release:        2
 Summary:        An easy whitelist-based HTML-sanitizing tool
 Group:          Development/Python
 License:        ASL 2.0
@@ -33,7 +33,7 @@ sed -i 's/pytest-runner>=2.0,<3dev/pytest-runner/' setup.py
 rm -r bleach/_vendor/
 # Bleach has a shim layer that references the vendored html5lib we just deleted.
 # Let's patch up the imports to use the real html5lib.
-sed -i "s/bleach._vendor.html5lib/html5lib/g" bleach/html5lib_shim.py
+sed -i "s/bleach._vendor.html5lib/html5lib/g" bleach/html5lib_shim.py tests/test_clean.py bleach/sanitizer.py
 
 %build
 %py_build
