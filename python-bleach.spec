@@ -2,7 +2,7 @@
 
 Name:           python-%{srcname}
 Version:        4.1.0
-Release:        3
+Release:        4
 Summary:        An easy whitelist-based HTML-sanitizing tool
 Group:          Development/Python
 License:        ASL 2.0
