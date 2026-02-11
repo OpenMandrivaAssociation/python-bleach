@@ -30,7 +30,7 @@ attributes based on a white list.
 rm -rf %{module}.egg-info
 
 # Remove vendored libraries which were added for https://github.com/mozilla/bleach/issues/386
-# rm -rf _vendor/
+# rm -rf bleach/_vendor/
 # Bleach has a shim layer that references the vendored html5lib we just deleted.
 # Let's patch up the imports to use the real html5lib.
 #sed -i "s/bleach._vendor.html5lib/html5lib/g" bleach/html5lib_shim.py tests/test_clean.py bleach/sanitizer.py
