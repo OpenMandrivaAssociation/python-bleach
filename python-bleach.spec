@@ -2,7 +2,7 @@
 
 Name:		python-bleach
 Version:	6.4.0
-Release:	1
+Release:	2
 Summary:	An easy whitelist-based HTML-sanitizing tool
 Group:		Development/Python
 License:	Apache-2.0
@@ -11,7 +11,7 @@ Source0:	%{URL}/archive/v%{version}/%{module}-%{version}.tar.gz#/%{name}-%{versi
 
 BuildSystem:	python
 BuildArch:	noarch
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(tinycss2)
